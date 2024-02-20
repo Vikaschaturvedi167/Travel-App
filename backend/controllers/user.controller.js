@@ -6,6 +6,7 @@ const userController = express.Router();
 userController.get("/", async (req, res) => {
   const users = await UserModel.find();
   res.send({ msg: users });
+  // catch error
 });
 
 module.exports = {
